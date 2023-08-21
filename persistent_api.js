@@ -44,7 +44,6 @@ app.get("/users/:id", async (req, res) => {
 });
 
 app.post("/users", async (req, res) => {
-  console.log(req.body);
   const newUser = new User({ ...req.body });
   await newUser.save();
   return res.status(201).send();
