@@ -12,7 +12,7 @@ mongoose.connect(mongoDBConnection, {
 
 const UserSchema = new mongoose.Schema({
   id: Number,
-  name: String,
+  username: String,
   active: Boolean,
 });
 
@@ -20,6 +20,14 @@ const User = mongoose.model("User", UserSchema);
 
 const app = express();
 app.use(express.json());
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 
 app.get("/users", async (req, res) => {
   const allUsers = await User.find();
@@ -36,6 +44,7 @@ app.get("/users/:id", async (req, res) => {
 });
 
 app.post("/users", async (req, res) => {
+  console.log(req.body);
   const newUser = new User({ ...req.body });
   await newUser.save();
   return res.status(201).send();
