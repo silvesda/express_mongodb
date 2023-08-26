@@ -3,17 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My API Frontend</title>
+    <title>Fishing Accessories</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="api_connector.js"></script>
   </head>
   <body>
-    <button onclick="getUsers()">Get Users</button>
-    <form onsubmit="postUser" id="userForm">
-      <input type="text" id="username" name="username" placeholder="Username" />
-      <input type="checkbox" id="active" name="active" value="true" />
-      <input type="submit" value="Submit" />
-    </form>
-    <ul id="usersList"></ul>
+    <header>
+      <h1>Fischers Frische Fische</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="hero">
+        <h2>Welcome to our Fishing Accessories Shop</h2>
+        <p>Explore a wide range of high-quality fishing gear and accessories.</p>
+        <a href="products.html" class="cta-button">Shop Now</a>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2023 Fishing Accessories Shop. All rights reserved.</p>
+    </footer>
   </body>
 </html>
