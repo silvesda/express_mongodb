@@ -42,4 +42,17 @@ const products = [
   
     return productItem;
   }
+
+  function populateProductList() {
+    const productList = document.getElementById("productList");
+  
+    products.forEach(product => {
+      const productItem = createProductItem(product);
+      productList.appendChild(productItem);
+    });
+  }
+  
+
+  window.onload = populateProductList;
+  
   
