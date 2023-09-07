@@ -6,6 +6,10 @@ MONGO_URI=Your Mongo Url here
 
 save the file
 
-open terminal in root
+open terminal in root:
+
+
 npm i
+
+
 node index.js
