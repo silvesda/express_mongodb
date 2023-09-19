@@ -217,4 +217,78 @@ body, h1, h2, h3, ul, li, p {
   margin: 0;
 }
 
-  
+#mobile-menu-button {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+/* Responsve styling */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+#mobile-menu-button {
+  display: block;
+}
+
+
+#navbar ul {
+  display: none;
+}
+
+
+#navbar.active {
+  display: block;
+  background-color: #0055A4;
+  position: absolute;
+  top: 60px; 
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#navbar.active ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+#navbar.active li {
+  margin: 10px 0;
+}
+
+
+
+  main {
+    padding: 20px;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  .about-section,
+  .products-section,
+  .services-section {
+    padding: 20px;
+  }
+
+  .product-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
