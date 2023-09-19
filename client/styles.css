@@ -292,3 +292,23 @@ body, h1, h2, h3, ul, li, p {
     margin: 10px 0;
   }
 }
+
+
+
+/* contacrt form errors styling*/
+
+
+#validation-errors {
+  display: none;
+  color: #FF0000; 
+  margin-top: 10px;
+}
+
+#validation-errors ul {
+  list-style: none;
+}
+
+#validation-errors li {
+  margin-bottom: 5px;
+}
+
